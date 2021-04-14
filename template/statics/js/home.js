@@ -693,15 +693,26 @@ var MAC={
             if($('.mac_pop_bg').length !=1) {
                 MAC.Pop.Remove();
             }
-            $('body').append('<div class="popup" id="report-popup"><div class="popup-icon"><img src="/statics/images/backhome.svg"></div><div class="popup-main"></div><div class="close-popup" id="close-popup" ><i class="icon-close-o"></i></div></div><div class="shortcuts-overlay"></div>');
-            $('#close-popup').click(function(){
-                $('.shortcuts-overlay:last,#report-popup').remove();
+            $('body').append('<div class="mac_pop_msg_bg"></div><div class="mac_pop_msg"><div class="pop-msg"></div></div>');
+            $('.mac_pop_msg .pop_close').click(function(){
+                $('.mac_pop_msg').remove();
             });
 
-            //$('.mac_pop_msg').width($w);
-            //$('.mac_pop_msg').height($h);
-            $(".popup-main").html($msg);
+            $('.mac_pop_msg').width($w);
+            $('.mac_pop_msg').height($h);
+            $('.mac_pop_msg .pop-msg').html($msg);
+            $('.mac_pop_msg_bg,.mac_pop_msg').show();
             setTimeout(MAC.Pop.RemoveMsg,$timeout);
+        },
+        'Notice':function($title,$msg) {
+            $('body').append('<div class="popup open"><div class="popup-icon"><img src="/statics/images/backhome.svg"></div><div class="popup-header"><h3 class="popup-title"></h3></div><div class="popup-main"></div><div class="popup-footer"><span class="popup-btn" id="close-popup">我记住啦</span></div></div><div class="shortcuts-mobile-overlay"></div>');
+            
+            $('#close-popup').click(function(){
+                $('.shortcuts-mobile-overlay:last,.popup.open').remove();
+            });
+            
+            $(".popup-title").html($title);
+            $(".popup-main").html($msg);
         },
         'Show':function($w,$h,$title,$url,$callback) {
             if($('.mac_pop_bg').length !=1) {
