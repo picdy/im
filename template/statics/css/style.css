@@ -964,7 +964,7 @@ input[type=checkbox] {
     flex: 1
 }
 .search-btn {
-    padding: 0 20px
+    padding: 0 20px 0 0
 }
 .search-btn .icon-search {
     width: 17px;
