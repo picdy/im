@@ -1703,7 +1703,7 @@ input[type=checkbox] {
     width: 100%
 }
 .module-item-cover {
-    background-image: url('/images/loading.png');
+    background-image: url('../images/loading.png');
     background-size: cover;
 }
 .module-item-pic img {
