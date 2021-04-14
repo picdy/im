@@ -348,6 +348,12 @@ input[type=checkbox] {
 .icon-screen-o:before {
     content: "\e91c"
 }
+.icon-arrow-left-o:before {
+    content: "\e91e"
+}
+.icon-lightbulb:before {
+    content: "\e91f"
+}
 .icon {
     width: 16px;
     height: 16px;
@@ -1627,13 +1633,17 @@ input[type=checkbox] {
     left: 0;
     height: 44px;
     padding: 10px;
+    z-index: 3;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.68), transparent)
 }
 .module-item-caption span {
     max-width: 58px;
     background: rgba(0, 0, 0, .51);
     color: #c2c6d0;
-    margin: 0 5px 0 0
+    margin: 0
 }
 .module-item-caption span:last-child {
     margin: 0
@@ -1693,7 +1703,7 @@ input[type=checkbox] {
     width: 100%
 }
 .module-item-cover {
-    background-image: url('../images/loading.png');
+    background-image: url('/statics/images/loading.png');
     background-size: cover;
 }
 .module-item-pic img {
@@ -2451,7 +2461,7 @@ input[type=checkbox] {
 .player-block.open .player-box-main .MacPlayer,
 .player-block.open .player-box-main .MacPlayer iframe,
 .player-block.open .player-box-main .MacPlayer table {
-	height: 450px;
+	height: 500px;
     padding: 0 !important;
 }
 .player-block.open .player-box-main,
@@ -2561,22 +2571,24 @@ input[type=checkbox] {
 .player-box-switch i {
     position: absolute;
     top: 23px;
-    left: -3px;
+    left: -2px;
     color: #232328;
     font-size: 0.8rem;
 }
-
-.player-block.open .player-box-switch .fa-chevron-right,
-.player-box-switch .fa-chevron-left {
+.player-block.open .player-box-switch .icon-arrow-right-o,
+.player-box-switch .icon-arrow-left-o {
     display: none;
+    left: -3px;
 }
-.player-block.open .player-box-switch .fa-chevron-left,
-.player-box-switch .fa-chevron-right {
+.player-block.open .player-box-switch .icon-arrow-left-o,
+.player-box-switch .icon-arrow-right-o {
     display: block;
-    left: 1px;
 }
-.offlight .wrapper {
-	background: #101010;
+.offlight #header,
+.offlight #footer,
+.offlight .wrapper,
+.offlight .player-block {
+	background: #000;
 }
 .offlight #footer,
 .offlight .wrapper .vod-content {
@@ -2695,6 +2707,10 @@ input[type=checkbox] {
         font-size: 0;
         position: relative
     }
+    .MacPlayer {
+	    border-radius: 10px 10px 0 0;
+		overflow: hidden;
+    }
     .player-box-main {
         width: calc(100% - 380px);
         display: inline-block
@@ -2732,7 +2748,7 @@ input[type=checkbox] {
         background: #232328
     }
     .player-side-tab .module-tab-item.selected {
-        padding-left: 20px;
+        padding-left: 15px;
         margin-left: 0;
         font-weight: 700;
         position: relative;
