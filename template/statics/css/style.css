@@ -2090,8 +2090,7 @@ input[type=checkbox] {
     height: 3px
 }
 .library-list {
-    display: flex;
-    flex-wrap: wrap;
+    display: inline-block;
 }
 .library-item {
     white-space: nowrap;
