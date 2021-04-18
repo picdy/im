@@ -237,16 +237,16 @@ input[type=checkbox] {
     border-top: 8px solid rgba(7, 7, 10, .92)
 }
 @font-face {
-    font-family: dianyingim;
-    src: url(../fonts/dianyingim.eot?fangfang);
-    src: url(../fonts/dianyingim.eot?fangfang#iefix) format("embedded-opentype"), url(../fonts/dianyingim.ttf?fangfang) format("truetype"), url(../fonts/dianyingim.woff?fangfang) format("woff"), url(../fonts/dianyingim.svg?fangfang#dianyingim) format("svg");
+    font-family: dianying;
+    src: url(../fonts/dianying.eot?fangfang);
+    src: url(../fonts/dianying.eot?fangfang#iefix) format("embedded-opentype"), url(../fonts/dianying.ttf?fangfang) format("truetype"), url(../fonts/dianying.woff?fangfang) format("woff"), url(../fonts/dianying.svg?fangfang#dianying) format("svg");
     font-weight: 400;
     font-style: normal;
     font-display: block
 }
 [class^=icon-],
 [class*=" icon-"] {
-    font-family: dianyingim !important;
+    font-family: dianying !important;
     speak: never;
     font-style: normal;
     font-weight: 400;
@@ -260,6 +260,9 @@ input[type=checkbox] {
 }
 .icon-home:before {
     content: "\e91d"
+}
+.icon-next:before {
+    content: "\e91e"
 }
 .icon-happy:before {
     content: "\e900"
@@ -2736,8 +2739,8 @@ input[type=checkbox] {
         color: rgba(255, 255, 255, .5);
         line-height: inherit;
         display: block;
-        padding: 5px 10px 5px 15px;
-        margin: 5px 5px 0 0;
+        padding: 15px 10px 15px 20px;
+        margin: 5px 5px 0;
         background: #141416;
         border-radius: 0 5px 5px 0
     }
@@ -2747,7 +2750,7 @@ input[type=checkbox] {
         background: #232328
     }
     .player-side-tab .module-tab-item.selected {
-        padding-left: 15px;
+        padding-left: 25px;
         margin-left: 0;
         font-weight: 700;
         position: relative;
